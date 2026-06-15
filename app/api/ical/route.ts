@@ -3,7 +3,7 @@ import {
   getGamesForTeams,
   getBroadcastForGame,
   getGameTitle,
-  getGameDateUTC,
+  getGameStartUTC,
   getVenue,
   competitionData,
 } from "@/lib/fixtures";
@@ -46,7 +46,7 @@ export async function GET(req: NextRequest) {
     return new NextResponse("Missing teams parameter", { status: 400 });
   }
 
-  const games = getGamesForTeams(teams, country);
+  const games = getGamesForTeams(teams);
   const countryBroadcast = competitionData.broadcast[country as keyof typeof competitionData.broadcast];
   const countryLabel = countryBroadcast?.label ?? country.toUpperCase();
 
@@ -62,10 +62,10 @@ export async function GET(req: NextRequest) {
   ];
 
   for (const game of games) {
-    const start = getGameDateUTC(game);
+    const start = getGameStartUTC(game);
     const end = new Date(start.getTime() + 2 * 60 * 60 * 1000); // +2h
     const title = `⚽ ${getGameTitle(game)}`;
-    const venue = getVenue(game.venue);
+    const venue = game.venue ? getVenue(game.venue) : null;
     const channels = getBroadcastForGame(game, country);
 
     const channelLine =
