@@ -73,25 +73,21 @@ export async function GET(req: NextRequest) {
         ? `📺 ${channels.map((c) => `${c.name}${c.free ? "" : " (pay)"}`).join(" / ")}`
         : "";
 
-    const phaseLabel: Record<string, string> = {
-      group: `Group ${(game as { group?: string }).group ?? ""} — Matchday ${(game as { matchday?: number | null }).matchday ?? ""}`,
-      round_of_32: "Round of 32",
-      round_of_16: "Round of 16",
-      quarter_final: "Quarter-Final",
-      semi_final: "Semi-Final",
-      third_place: "Third Place",
-      final: "Final 🏆",
-    };
+    const g = game as { group?: string; matchday?: number | null };
+    const phaseStr =
+      game.phase === "group"
+        ? `Group ${g.group ?? ""}${g.matchday ? ` — Matchday ${g.matchday}` : ""}`
+        : { round_of_32: "Round of 32", round_of_16: "Round of 16", quarter_final: "Quarter-Final", semi_final: "Semi-Final", third_place: "Third Place", final: "Final 🏆" }[game.phase] ?? game.phase;
 
     const description = [
-      phaseLabel[game.phase] ?? game.phase,
+      phaseStr,
       venue ? `📍 ${venue.name}, ${venue.city}` : "",
       channelLine,
       "",
       "matchcal.live/wdc-2026",
     ]
-      .filter((l) => l !== undefined)
-      .join("\\n");
+      .filter(Boolean)
+      .join("\n");
 
     const location = venue ? `${venue.name}, ${venue.city}, ${venue.country}` : "";
 
