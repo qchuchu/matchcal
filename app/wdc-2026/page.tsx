@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { allTeams, allCountries } from "@/lib/fixtures";
 
 const GOOGLE_CAL_BASE =
@@ -263,8 +264,11 @@ export default function WDC2026Page() {
           </div>
         </section>
 
-        <footer className="text-center text-white/20 text-xs pt-4">
-          matchcal.live · Not affiliated with FIFA
+        <footer className="text-center text-white/20 text-xs pt-4 flex items-center justify-center gap-4">
+          <span>matchcal.live · Not affiliated with FIFA</span>
+          <Link href="/wdc-2026/games" className="hover:text-white/50 underline underline-offset-2">
+            View all games →
+          </Link>
         </footer>
       </div>
     </main>
