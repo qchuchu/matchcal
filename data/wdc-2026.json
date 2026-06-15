@@ -155,6 +155,27 @@
           "url": "https://sporttv.pt"
         }
       }
+    },
+    "sg": {
+      "label": "Singapore",
+      "flag": "🇸🇬",
+      "channels": {
+        "Ch5": {
+          "name": "Mediacorp Ch 5",
+          "free": true,
+          "url": "https://www.mewatch.sg/fifaworldcup"
+        },
+        "meWatch": {
+          "name": "mewatch",
+          "free": false,
+          "url": "https://www.mewatch.sg/fifaworldcup"
+        },
+        "StarHub": {
+          "name": "StarHub",
+          "free": false,
+          "url": "https://www.starhub.com"
+        }
+      }
     }
   },
   "teams": {
@@ -535,6 +556,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "played",
@@ -586,6 +612,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "played",
@@ -637,6 +668,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "played",
@@ -688,6 +723,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "played",
@@ -739,6 +779,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "played",
@@ -790,6 +834,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "played",
@@ -841,6 +889,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "played",
@@ -892,6 +944,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "played",
@@ -942,6 +999,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "played",
@@ -993,6 +1055,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "played",
@@ -1044,6 +1110,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "played",
@@ -1094,6 +1165,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "played",
@@ -1146,6 +1221,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1195,6 +1274,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1244,6 +1328,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1292,6 +1380,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1341,6 +1434,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1390,6 +1487,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1439,6 +1540,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1487,6 +1593,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1536,6 +1647,11 @@
         "pt": [
           "RTP",
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1585,6 +1701,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1633,6 +1753,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1681,6 +1805,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1730,6 +1859,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1779,6 +1912,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1827,6 +1965,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1875,6 +2018,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1924,6 +2071,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -1973,6 +2124,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2022,6 +2178,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2070,6 +2231,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2118,6 +2283,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2167,6 +2337,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2215,6 +2389,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2262,6 +2440,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2311,6 +2494,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2360,6 +2548,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2408,6 +2600,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2456,6 +2653,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2506,6 +2707,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2555,6 +2760,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2603,6 +2813,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2651,6 +2866,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2700,6 +2919,10 @@
         "pt": [
           "RTP",
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2749,6 +2972,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2797,6 +3025,11 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2845,6 +3078,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2893,6 +3130,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2942,6 +3183,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -2990,6 +3235,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3039,6 +3288,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3087,6 +3340,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3134,6 +3391,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3182,6 +3443,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3231,6 +3496,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3279,6 +3548,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3328,6 +3601,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3376,6 +3653,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3424,6 +3705,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3473,6 +3758,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3521,6 +3810,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3568,6 +3861,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3617,6 +3914,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3665,6 +3966,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3713,6 +4018,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3761,6 +4070,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3810,6 +4123,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3860,6 +4177,10 @@
         "pt": [
           "RTP",
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3908,6 +4229,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -3956,6 +4281,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4005,6 +4334,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4052,6 +4385,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4098,6 +4435,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4145,6 +4486,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4191,6 +4536,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4238,6 +4587,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4285,6 +4638,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4332,6 +4689,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4379,6 +4740,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4426,6 +4791,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4473,6 +4842,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4520,6 +4893,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4567,6 +4944,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4614,6 +4995,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4661,6 +5046,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4708,6 +5097,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4755,6 +5148,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4801,6 +5198,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4848,6 +5249,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4895,6 +5300,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4942,6 +5351,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -4989,6 +5402,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -5036,6 +5453,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -5083,6 +5504,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -5130,6 +5555,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -5177,6 +5606,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -5224,6 +5657,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -5271,6 +5708,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -5318,6 +5759,10 @@
         ],
         "pt": [
           "Sport TV"
+        ],
+        "sg": [
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -5367,6 +5812,11 @@
         "pt": [
           "RTP",
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -5416,6 +5866,11 @@
         "pt": [
           "RTP",
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -5465,6 +5920,11 @@
         "pt": [
           "RTP",
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",
@@ -5514,6 +5974,11 @@
         "pt": [
           "RTP",
           "Sport TV"
+        ],
+        "sg": [
+          "Ch5",
+          "meWatch",
+          "StarHub"
         ]
       },
       "status": "upcoming",

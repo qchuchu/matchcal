@@ -13,10 +13,10 @@ export const COUNTRY_TO_TEAM: Record<string, string> = {
   TN: "TUN", TR: "TUR", US: "USA", UY: "URU", UZ: "UZB",
 };
 
-// ISO country → our broadcast country key (only the 8 we have TV data for)
+// ISO country → our broadcast country key (only the ones we have TV data for)
 export const COUNTRY_TO_BROADCAST: Record<string, string> = {
   FR: "fr", GB: "uk", US: "us", ES: "es",
-  DE: "de", BR: "br", AR: "ar", PT: "pt",
+  DE: "de", BR: "br", AR: "ar", PT: "pt", SG: "sg",
 };
 
 const DEFAULT_COUNTRY = "fr";

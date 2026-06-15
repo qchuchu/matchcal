@@ -31,6 +31,17 @@ data.broadcast.us.channels = {
   Peacock: { name: "Peacock",     free: false, url: "https://peacocktv.com" },
 };
 
+// Singapore meta (not in the original JSON) — Mediacorp Ch 5 + mewatch + StarHub
+data.broadcast.sg = {
+  label: "Singapore",
+  flag: "🇸🇬",
+  channels: {
+    Ch5:     { name: "Mediacorp Ch 5", free: true,  url: "https://www.mewatch.sg/fifaworldcup" },
+    meWatch: { name: "mewatch",        free: false, url: "https://www.mewatch.sg/fifaworldcup" },
+    StarHub: { name: "StarHub",        free: false, url: "https://www.starhub.com" },
+  },
+};
+
 // ─── 2. FR — per-game data from Eurosport (published 15 Jun 2026) ────────────
 // Source: https://www.eurosport.fr/football/coupe-du-monde/2026/...
 //
@@ -69,8 +80,25 @@ const FR_M6 = new Set([
   "COL-POR",
 ]);
 
+// ─── SG — the 24 group matches free-to-air on Mediacorp Channel 5 ────────────
+// Source: CNA "Where to watch FIFA World Cup 2026" (Mediacorp official).
+// 28 free total = these 24 group games + both semis + 3rd place + final.
+// Matched as sorted team-code pairs so home/away ordering can't break it.
+const sgFreePair = (a, b) => [a, b].sort().join("-");
+const SG_FTA_GROUP = new Set([
+  sgFreePair("MEX", "RSA"), sgFreePair("KOR", "CZE"), sgFreePair("USA", "PAR"),
+  sgFreePair("AUS", "TUR"), sgFreePair("GER", "CUW"), sgFreePair("CIV", "ECU"),
+  sgFreePair("BEL", "EGY"), sgFreePair("IRN", "NZL"), sgFreePair("ARG", "ALG"),
+  sgFreePair("AUT", "JOR"), sgFreePair("POR", "COD"), sgFreePair("UZB", "COL"),
+  sgFreePair("SUI", "BIH"), sgFreePair("CAN", "QAT"), sgFreePair("SCO", "MAR"),
+  sgFreePair("BRA", "HAI"), sgFreePair("NED", "SWE"), sgFreePair("TUN", "JPN"),
+  sgFreePair("ESP", "KSA"), sgFreePair("URU", "CPV"), sgFreePair("FRA", "IRQ"),
+  sgFreePair("NOR", "SEN"), sgFreePair("ENG", "GHA"), sgFreePair("PAN", "CRO"),
+]);
+
 // ─── 3. Apply to all games ────────────────────────────────────────────────────
 let frM6Count = 0, frBeINCount = 0;
+let sgFreeCount = 0;
 
 for (const game of data.games) {
   if (!game.broadcast) game.broadcast = {};
@@ -116,6 +144,13 @@ for (const game of data.games) {
   const porGame = game.home === "POR" || game.away === "POR";
   const majorKnockout = ["semi_final", "third_place", "final"].includes(game.phase);
   game.broadcast.pt = (porGame || majorKnockout) ? ["RTP", "Sport TV"] : ["Sport TV"];
+
+  // Singapore — mewatch + StarHub carry all 104 (pay); 28 are also free on Mediacorp Ch 5
+  const sgFree =
+    SG_FTA_GROUP.has(`${[game.home, game.away].sort().join("-")}`) ||
+    ["semi_final", "third_place", "final"].includes(game.phase);
+  game.broadcast.sg = sgFree ? ["Ch5", "meWatch", "StarHub"] : ["meWatch", "StarHub"];
+  if (sgFree) sgFreeCount++;
 }
 
 writeFileSync(DATA_PATH, JSON.stringify(data, null, 2));
@@ -131,3 +166,4 @@ const argGames = data.games.filter(g => g.home === "ARG" || g.away === "ARG").le
 console.log(`  🇦🇷 AR: ${argGames} Argentina games → TyC + TV Pública · rest → TyC only`);
 const porGames = data.games.filter(g => g.home === "POR" || g.away === "POR" || ["semi_final","third_place","final"].includes(g.phase)).length;
 console.log(`  🇵🇹 PT: ${porGames} games → RTP + Sport TV · rest → Sport TV only`);
+console.log(`  🇸🇬 SG: ${sgFreeCount} games free on Mediacorp Ch 5 · all 104 → mewatch + StarHub`);
