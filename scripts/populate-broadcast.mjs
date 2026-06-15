@@ -42,6 +42,18 @@ data.broadcast.sg = {
   },
 };
 
+// Mexico meta (not in the original JSON) — open TV (Televisa/TV Azteca) + ViX streaming
+data.broadcast.mx = {
+  label: "Mexico",
+  flag: "🇲🇽",
+  channels: {
+    Canal5:  { name: "Canal 5",  free: true,  url: "https://canal5.com" },
+    Azteca7: { name: "Azteca 7", free: true,  url: "https://www.aztecadeportes.com" },
+    ViX:     { name: "ViX",      free: false, url: "https://www.vix.com" },
+    TUDN:    { name: "TUDN",     free: false, url: "https://www.tudn.com" },
+  },
+};
+
 // ─── 2. FR — per-game data from Eurosport (published 15 Jun 2026) ────────────
 // Source: https://www.eurosport.fr/football/coupe-du-monde/2026/...
 //
@@ -96,9 +108,25 @@ const SG_FTA_GROUP = new Set([
   sgFreePair("NOR", "SEN"), sgFreePair("ENG", "GHA"), sgFreePair("PAN", "CRO"),
 ]);
 
+// ─── MX — the 17 group matches free-to-air on open TV (Canal 5 / Azteca 7) ───
+// Source: TUDN "Calendario Mundial 2026: los partidos que van por TV abierta y por ViX".
+// ~32 free total across the tournament; the 17 mappable group games are listed here.
+// Knockout free picks are bracket-slot/conditional ("en caso de ser México"), so the
+// loop only adds semis + 3rd place + final as free; everything else defaults to ViX.
+const mxFreePair = (a, b) => [a, b].sort().join("-");
+const MX_FTA_GROUP = new Set([
+  mxFreePair("MEX", "RSA"), mxFreePair("USA", "PAR"), mxFreePair("BRA", "MAR"),
+  mxFreePair("NED", "JPN"), mxFreePair("ARG", "ALG"), mxFreePair("ENG", "CRO"),
+  mxFreePair("MEX", "KOR"), mxFreePair("BRA", "HAI"), mxFreePair("NED", "SWE"),
+  mxFreePair("ESP", "KSA"), mxFreePair("NOR", "SEN"), mxFreePair("COL", "COD"),
+  mxFreePair("CZE", "MEX"), mxFreePair("ECU", "GER"), mxFreePair("URU", "ESP"),
+  mxFreePair("PAN", "ENG"), mxFreePair("COL", "POR"),
+]);
+
 // ─── 3. Apply to all games ────────────────────────────────────────────────────
 let frM6Count = 0, frBeINCount = 0;
 let sgFreeCount = 0;
+let mxFreeCount = 0;
 
 for (const game of data.games) {
   if (!game.broadcast) game.broadcast = {};
@@ -151,6 +179,13 @@ for (const game of data.games) {
     ["semi_final", "third_place", "final"].includes(game.phase);
   game.broadcast.sg = sgFree ? ["Ch5", "meWatch", "StarHub"] : ["meWatch", "StarHub"];
   if (sgFree) sgFreeCount++;
+
+  // Mexico — ViX carries all 104 (pay); ~32 are free on open TV (Canal 5 / Azteca 7)
+  const mxFree =
+    MX_FTA_GROUP.has(`${[game.home, game.away].sort().join("-")}`) ||
+    ["semi_final", "third_place", "final"].includes(game.phase);
+  game.broadcast.mx = mxFree ? ["Canal5", "Azteca7", "ViX"] : ["ViX"];
+  if (mxFree) mxFreeCount++;
 }
 
 writeFileSync(DATA_PATH, JSON.stringify(data, null, 2));
@@ -167,3 +202,4 @@ console.log(`  🇦🇷 AR: ${argGames} Argentina games → TyC + TV Pública ·
 const porGames = data.games.filter(g => g.home === "POR" || g.away === "POR" || ["semi_final","third_place","final"].includes(g.phase)).length;
 console.log(`  🇵🇹 PT: ${porGames} games → RTP + Sport TV · rest → Sport TV only`);
 console.log(`  🇸🇬 SG: ${sgFreeCount} games free on Mediacorp Ch 5 · all 104 → mewatch + StarHub`);
+console.log(`  🇲🇽 MX: ${mxFreeCount} games free on Canal 5 / Azteca 7 · all 104 → ViX`);

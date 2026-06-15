@@ -176,6 +176,32 @@
           "url": "https://www.starhub.com"
         }
       }
+    },
+    "mx": {
+      "label": "Mexico",
+      "flag": "🇲🇽",
+      "channels": {
+        "Canal5": {
+          "name": "Canal 5",
+          "free": true,
+          "url": "https://canal5.com"
+        },
+        "Azteca7": {
+          "name": "Azteca 7",
+          "free": true,
+          "url": "https://www.aztecadeportes.com"
+        },
+        "ViX": {
+          "name": "ViX",
+          "free": false,
+          "url": "https://www.vix.com"
+        },
+        "TUDN": {
+          "name": "TUDN",
+          "free": false,
+          "url": "https://www.tudn.com"
+        }
+      }
     }
   },
   "teams": {
@@ -561,6 +587,11 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "played",
@@ -617,6 +648,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "played",
@@ -672,6 +706,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "played",
@@ -728,6 +765,11 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "played",
@@ -783,6 +825,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "played",
@@ -838,6 +883,11 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "played",
@@ -893,6 +943,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "played",
@@ -949,6 +1002,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "played",
@@ -1004,6 +1060,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "played",
@@ -1059,6 +1118,11 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "played",
@@ -1115,6 +1179,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "played",
@@ -1169,6 +1236,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "played",
@@ -1225,6 +1295,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1279,6 +1352,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1332,6 +1408,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1385,6 +1464,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1438,6 +1520,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1491,6 +1576,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1545,6 +1633,11 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1598,6 +1691,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1652,6 +1748,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1705,6 +1804,11 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1757,6 +1861,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1810,6 +1917,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1863,6 +1973,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1917,6 +2030,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -1970,6 +2086,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2022,6 +2141,11 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2075,6 +2199,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2129,6 +2256,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2183,6 +2313,11 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2235,6 +2370,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2288,6 +2426,11 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2341,6 +2484,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2393,6 +2539,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2445,6 +2594,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2499,6 +2651,11 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2552,6 +2709,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2605,6 +2765,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2657,6 +2820,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2711,6 +2877,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2765,6 +2934,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2818,6 +2990,11 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2870,6 +3047,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2923,6 +3103,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -2977,6 +3160,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3030,6 +3216,9 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3082,6 +3271,11 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3134,6 +3328,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3187,6 +3384,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3239,6 +3439,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3292,6 +3495,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3344,6 +3550,11 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3395,6 +3606,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3447,6 +3661,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3500,6 +3717,11 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3552,6 +3774,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3605,6 +3830,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3657,6 +3885,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3709,6 +3940,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3762,6 +3996,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3814,6 +4051,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3865,6 +4105,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3918,6 +4161,11 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -3970,6 +4218,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4022,6 +4273,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4074,6 +4328,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4127,6 +4384,11 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4181,6 +4443,11 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4233,6 +4500,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4285,6 +4555,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4338,6 +4611,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4389,6 +4665,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4439,6 +4718,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4490,6 +4772,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4540,6 +4825,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4591,6 +4879,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4642,6 +4933,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4693,6 +4987,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4744,6 +5041,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4795,6 +5095,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4846,6 +5149,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4897,6 +5203,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4948,6 +5257,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -4999,6 +5311,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5050,6 +5365,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5101,6 +5419,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5152,6 +5473,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5202,6 +5526,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5253,6 +5580,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5304,6 +5634,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5355,6 +5688,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5406,6 +5742,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5457,6 +5796,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5508,6 +5850,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5559,6 +5904,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5610,6 +5958,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5661,6 +6012,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5712,6 +6066,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5763,6 +6120,9 @@
         "sg": [
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5817,6 +6177,11 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5871,6 +6236,11 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5925,6 +6295,11 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
@@ -5979,6 +6354,11 @@
           "Ch5",
           "meWatch",
           "StarHub"
+        ],
+        "mx": [
+          "Canal5",
+          "Azteca7",
+          "ViX"
         ]
       },
       "status": "upcoming",
