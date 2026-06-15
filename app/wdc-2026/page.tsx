@@ -93,7 +93,7 @@ function TeamDropdown({
     <div ref={ref} className="relative w-full">
       <button
         onClick={() => setOpen((v) => !v)}
-        className={`w-full flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl border text-left transition-all ${
+        className={`w-full flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl border text-left transition-all cursor-pointer ${
           open
             ? "bg-lime-400/10 border-lime-400/60 text-white"
             : selectedTeams.length > 0
@@ -128,7 +128,7 @@ function TeamDropdown({
                 <li key={team.code}>
                   <button
                     onClick={() => onToggle(team.code)}
-                    className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm transition-colors ${
+                    className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm transition-colors cursor-pointer ${
                       checked ? "bg-lime-400/10 text-white" : "text-white/70 hover:bg-white/5 hover:text-white"
                     }`}
                   >
