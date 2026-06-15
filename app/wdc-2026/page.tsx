@@ -182,10 +182,19 @@ export default function WDC2026Page() {
       prev.includes(code) ? prev.filter((t) => t !== code) : [...prev, code]
     );
 
+  const track = (action: string) => {
+    fetch("/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ teams: selectedTeams, country: selectedCountry, action }),
+    }).catch(() => {});
+  };
+
   const copyLink = () => {
     navigator.clipboard.writeText(webcalUrl);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+    track("copy");
   };
 
   const ready = selectedTeams.length > 0;
@@ -275,6 +284,7 @@ export default function WDC2026Page() {
                     href={googleUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => track("google")}
                     className="flex items-center gap-3 w-full bg-white text-gray-900 rounded-xl px-4 py-3.5 font-semibold hover:bg-gray-50 active:scale-[0.98] transition-all"
                   >
                     <svg className="w-5 h-5 shrink-0" viewBox="0 0 48 48">
@@ -291,6 +301,7 @@ export default function WDC2026Page() {
 
                   <a
                     href={webcalUrl}
+                    onClick={() => track("webcal")}
                     className="flex items-center gap-3 w-full bg-white/8 border border-white/15 text-white rounded-xl px-4 py-3.5 font-semibold hover:bg-white/12 active:scale-[0.98] transition-all"
                   >
                     <span className="text-xl shrink-0">📅</span>
