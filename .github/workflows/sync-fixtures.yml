@@ -1,0 +1,46 @@
+name: Sync WDC 2026 Fixtures
+
+on:
+  schedule:
+    # Every 6 hours during tournament (Jun 11 – Jul 19 2026)
+    - cron: "0 */6 * * *"
+  workflow_dispatch: # allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Sync fixtures
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: node scripts/sync-fixtures.mjs
+
+      - name: Commit updated fixtures
+        run: |
+          git config user.name "matchcal-bot"
+          git config user.email "bot@matchcal.live"
+          git add data/wdc-2026.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: sync fixtures $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
+
+      - name: Trigger Vercel redeploy
+        if: success()
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -n "$VERCEL_DEPLOY_HOOK" ]; then
+            curl -X POST "$VERCEL_DEPLOY_HOOK"
+          fi
