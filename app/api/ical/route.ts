@@ -111,6 +111,7 @@ export async function GET(req: NextRequest) {
       "Content-Type": "text/calendar; charset=utf-8",
       "Content-Disposition": `attachment; filename="wdc-2026-${teams.join("-")}.ics"`,
       "Cache-Control": "no-cache, no-store, must-revalidate",
+      "Access-Control-Allow-Origin": "*",
     },
   });
 }
