@@ -306,8 +306,8 @@ export default function WDC2026Page() {
                   >
                     <span className="text-xl shrink-0">📅</span>
                     <div>
-                      <div className="text-sm font-bold leading-none">Apple / Outlook</div>
-                      <div className="text-xs text-white/40 mt-0.5">Opens your default calendar</div>
+                      <div className="text-sm font-bold leading-none">Add to default calendar</div>
+                      <div className="text-xs text-white/40 mt-0.5">Apple Calendar, Outlook, Fantastical…</div>
                     </div>
                   </a>
 
