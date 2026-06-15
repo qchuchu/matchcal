@@ -101,6 +101,21 @@ for (const game of data.games) {
 
   // Spain — RTVE (La 1) and Cuatro/Mediaset both hold rights
   game.broadcast.es = ["RTVE", "Cuatro"];
+
+  // Germany — ARD and ZDF share free-to-air rights (alternating games, both public)
+  game.broadcast.de = ["ARD", "ZDF"];
+
+  // Brazil — TV Globo (free) + SporTV (pay, Globo's sports channel)
+  game.broadcast.br = ["Globo", "SporTV"];
+
+  // Argentina — TyC Sports (pay, all games) + TV Pública (free, Argentina games only)
+  const argGame = game.home === "ARG" || game.away === "ARG";
+  game.broadcast.ar = argGame ? ["TyC", "TV Pública"] : ["TyC"];
+
+  // Portugal — Sport TV (pay, all games) + RTP (free, Portugal games + major knockouts)
+  const porGame = game.home === "POR" || game.away === "POR";
+  const majorKnockout = ["semi_final", "third_place", "final"].includes(game.phase);
+  game.broadcast.pt = (porGame || majorKnockout) ? ["RTP", "Sport TV"] : ["Sport TV"];
 }
 
 writeFileSync(DATA_PATH, JSON.stringify(data, null, 2));
@@ -110,3 +125,9 @@ console.log(`  🇺🇸 US: meta keys fixed (FOX, Tele, FS1, Peacock)`);
 console.log(`  🇫🇷 FR: ${frM6Count} games on M6+beIN · ${frBeINCount} games on beIN only`);
 console.log(`  🇬🇧 UK: all ${data.games.length} games → BBC + ITV`);
 console.log(`  🇪🇸 ES: all ${data.games.length} games → RTVE + Cuatro`);
+console.log(`  🇩🇪 DE: all ${data.games.length} games → ARD + ZDF`);
+console.log(`  🇧🇷 BR: all ${data.games.length} games → Globo + SporTV`);
+const argGames = data.games.filter(g => g.home === "ARG" || g.away === "ARG").length;
+console.log(`  🇦🇷 AR: ${argGames} Argentina games → TyC + TV Pública · rest → TyC only`);
+const porGames = data.games.filter(g => g.home === "POR" || g.away === "POR" || ["semi_final","third_place","final"].includes(g.phase)).length;
+console.log(`  🇵🇹 PT: ${porGames} games → RTP + Sport TV · rest → Sport TV only`);
