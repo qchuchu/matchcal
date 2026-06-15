@@ -54,12 +54,12 @@
       "label": "United States",
       "flag": "🇺🇸",
       "channels": {
-        "Fox": {
+        "FOX": {
           "name": "Fox Sports",
           "free": false,
           "url": "https://foxsports.com"
         },
-        "Telemundo": {
+        "Tele": {
           "name": "Telemundo",
           "free": false,
           "url": "https://telemundo.com"
@@ -68,6 +68,11 @@
           "name": "FS1",
           "free": false,
           "url": "https://foxsports.com"
+        },
+        "Peacock": {
+          "name": "Peacock",
+          "free": false,
+          "url": "https://peacocktv.com"
         }
       }
     },
@@ -505,6 +510,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "played",
@@ -531,6 +547,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "played",
@@ -557,6 +584,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "played",
@@ -583,6 +621,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "played",
@@ -609,6 +658,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "played",
@@ -635,6 +695,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "played",
@@ -661,6 +732,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "played",
@@ -687,6 +769,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "played",
@@ -712,6 +805,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "played",
@@ -738,6 +842,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "played",
@@ -764,6 +879,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "played",
@@ -789,6 +915,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "played",
@@ -815,6 +952,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -838,6 +987,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -861,6 +1022,18 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -884,6 +1057,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -907,6 +1091,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -930,6 +1126,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -953,6 +1161,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -976,6 +1195,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -998,6 +1228,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1021,6 +1263,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1044,6 +1298,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1067,6 +1332,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1090,6 +1366,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1113,6 +1401,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1136,6 +1436,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1159,6 +1470,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1182,6 +1504,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1205,6 +1539,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1228,6 +1574,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1251,6 +1609,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1273,6 +1642,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1296,6 +1677,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1319,6 +1712,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1341,6 +1745,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1364,6 +1779,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1387,6 +1814,18 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1410,6 +1849,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1433,6 +1883,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1456,6 +1917,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1479,6 +1952,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1502,6 +1987,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1525,6 +2021,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1547,6 +2054,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1570,6 +2089,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1593,6 +2124,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1616,6 +2158,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1639,6 +2192,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1662,6 +2226,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1685,6 +2261,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1708,6 +2295,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1731,6 +2330,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1753,6 +2363,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1776,6 +2397,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1799,6 +2431,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1822,6 +2466,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1845,6 +2500,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1868,6 +2535,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1891,6 +2569,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1914,6 +2603,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1937,6 +2638,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1959,6 +2671,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -1982,6 +2705,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2005,6 +2740,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2028,6 +2774,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2051,6 +2808,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2074,6 +2842,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2097,6 +2877,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2120,6 +2912,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2143,6 +2946,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2166,6 +2980,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2188,6 +3013,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2209,6 +3045,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2231,6 +3078,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2252,6 +3110,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2274,6 +3143,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2296,6 +3176,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2318,6 +3209,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2340,6 +3242,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2362,6 +3275,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2384,6 +3308,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2406,6 +3341,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2428,6 +3374,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2450,6 +3407,17 @@
         "us": [
           "FS1",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2472,6 +3440,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2494,6 +3473,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2516,6 +3506,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2537,6 +3538,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2559,6 +3571,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2581,6 +3604,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2603,6 +3637,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2625,6 +3670,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2647,6 +3703,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2669,6 +3736,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2691,6 +3769,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2713,6 +3802,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2735,6 +3835,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2757,6 +3868,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2779,6 +3901,17 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2801,6 +3934,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2823,6 +3968,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2845,6 +4002,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
@@ -2867,6 +4036,18 @@
         "us": [
           "FOX",
           "Tele"
+        ],
+        "fr": [
+          "M6",
+          "beIN"
+        ],
+        "uk": [
+          "BBC",
+          "ITV"
+        ],
+        "es": [
+          "RTVE",
+          "Cuatro"
         ]
       },
       "status": "upcoming",
