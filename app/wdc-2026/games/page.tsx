@@ -48,17 +48,14 @@ function formatDate(dateStr: string, timeStr: string): string {
   });
 }
 
-function broadcastBadges(game: (typeof games)[number]) {
-  const bc = game.broadcast as Record<string, string[]>;
-  return Object.entries(bc).map(([country, channels]) => {
-    const meta = broadcastMeta[country as keyof typeof broadcastMeta];
-    return (
-      <span key={country} className="text-xs text-white/40">
-        {meta?.flag ?? country.toUpperCase()}{" "}
-        <span className="text-white/60">{channels.join(", ")}</span>
-      </span>
-    );
-  });
+type CountryMeta = { label: string; flag: string; channels: Record<string, { name: string; free: boolean }> };
+
+function broadcastForCountry(game: (typeof games)[number], country: string) {
+  const meta = broadcastMeta[country as keyof typeof broadcastMeta] as CountryMeta | undefined;
+  if (!meta) return null;
+  const keys = (game.broadcast as Record<string, string[]>)[country] ?? [];
+  const chans = keys.map((k) => meta.channels[k]).filter(Boolean);
+  return { meta, chans };
 }
 
 // All group-stage team codes
@@ -66,9 +63,15 @@ const allGroupTeams = Object.entries(typedTeams)
   .sort((a, b) => a[1].group.localeCompare(b[1].group) || a[1].name.localeCompare(b[1].name))
   .map(([code, t]) => ({ code, ...t }));
 
+// All broadcast countries, alphabetical by label
+const countryOptions = Object.entries(broadcastMeta)
+  .map(([code, m]) => ({ code, label: (m as CountryMeta).label, flag: (m as CountryMeta).flag }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+
 export default function GamesPage() {
   const [filterTeam, setFilterTeam] = useState("ALL");
   const [filterPhase, setFilterPhase] = useState("ALL");
+  const [filterCountry, setFilterCountry] = useState("fr");
 
   const filtered = useMemo(() => {
     return games.filter((g) => {
@@ -116,6 +119,18 @@ export default function GamesPage() {
           <option value="ALL">All phases</option>
           {phases.map((p) => (
             <option key={p} value={p}>{PHASE_LABEL[p] ?? p}</option>
+          ))}
+        </select>
+
+        <select
+          value={filterCountry}
+          onChange={(e) => setFilterCountry(e.target.value)}
+          className="bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-sm text-white focus:outline-none focus:border-blue-400"
+        >
+          {countryOptions.map((c) => (
+            <option key={c.code} value={c.code}>
+              {c.flag} {c.label}
+            </option>
           ))}
         </select>
 
@@ -196,8 +211,22 @@ export default function GamesPage() {
                     📍 {venue.city}
                   </p>
                 )}
-                <div className="flex flex-wrap gap-x-2 gap-y-0.5 justify-end">
-                  {broadcastBadges(game)}
+                <div className="flex flex-wrap gap-x-1.5 gap-y-0.5 justify-end">
+                  {(() => {
+                    const info = broadcastForCountry(game, filterCountry);
+                    if (!info || info.chans.length === 0)
+                      return <span className="text-xs text-white/20">no TV info</span>;
+                    return (
+                      <span className="text-xs text-white/40">
+                        {info.meta.flag}{" "}
+                        {info.chans.map((ch, i) => (
+                          <span key={i} className={ch.free ? "text-lime-300/80" : "text-white/55"}>
+                            {ch.name}{ch.free ? "" : " (pay)"}{i < info.chans.length - 1 ? ", " : ""}
+                          </span>
+                        ))}
+                      </span>
+                    );
+                  })()}
                 </div>
               </div>
             </div>

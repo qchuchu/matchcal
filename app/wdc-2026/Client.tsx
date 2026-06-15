@@ -18,6 +18,7 @@ function buildGoogleUrl(webcalUrl: string) {
 }
 
 const sortedTeams = [...allTeams].sort((a, b) => a.name.localeCompare(b.name));
+const sortedCountries = [...allCountries].sort((a, b) => a.label.localeCompare(b.label));
 
 function PitchSVG() {
   return (
@@ -169,6 +170,101 @@ function TeamDropdown({
   );
 }
 
+function CountryDropdown({
+  selected,
+  onSelect,
+}: {
+  selected: string;
+  onSelect: (code: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handler(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const current = sortedCountries.find((c) => c.code === selected);
+  const filtered = sortedCountries.filter((c) =>
+    c.label.toLowerCase().includes(query.toLowerCase())
+  );
+
+  return (
+    <div ref={ref} className="relative w-full">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className={`w-full flex items-center justify-between gap-3 px-4 py-3 rounded-xl border text-left transition-all cursor-pointer ${
+          open
+            ? "bg-lime-400/10 border-lime-400/60 text-white"
+            : "bg-white/5 border-white/15 text-white/80 hover:border-white/30"
+        }`}
+      >
+        <span className="flex items-center gap-2 text-sm truncate">
+          {current ? (
+            <>
+              <span className="text-base leading-none">{current.flag}</span>
+              <span className="font-[family-name:var(--font-body)]">{current.label}</span>
+            </>
+          ) : (
+            <span className="text-white/50">Select country…</span>
+          )}
+        </span>
+        <svg
+          className={`w-4 h-4 shrink-0 transition-transform text-white/40 ${open ? "rotate-180" : ""}`}
+          fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {open && (
+        <div className="absolute z-50 mt-2 w-full rounded-xl border border-white/15 bg-[#0d2818] shadow-2xl shadow-black/50 overflow-hidden">
+          <div className="p-2 border-b border-white/10">
+            <input
+              autoFocus
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search…"
+              className="w-full bg-white/5 rounded-lg px-3 py-2 text-sm text-white placeholder-white/30 outline-none border border-white/10 focus:border-lime-400/50"
+            />
+          </div>
+          <ul className="max-h-64 overflow-y-auto overscroll-contain py-1">
+            {filtered.map((c) => {
+              const sel = c.code === selected;
+              return (
+                <li key={c.code}>
+                  <button
+                    onClick={() => { onSelect(c.code); setOpen(false); setQuery(""); }}
+                    className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm transition-colors cursor-pointer ${
+                      sel ? "bg-lime-400/10 text-white" : "text-white/70 hover:bg-white/5 hover:text-white"
+                    }`}
+                  >
+                    <span className="text-base leading-none">{c.flag}</span>
+                    <span className="font-[family-name:var(--font-body)]">{c.label}</span>
+                    {sel && (
+                      <svg className="ml-auto w-4 h-4 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    )}
+                  </button>
+                </li>
+              );
+            })}
+            {filtered.length === 0 && (
+              <li className="px-3 py-4 text-center text-sm text-white/30">No countries found</li>
+            )}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function WDC2026Client({
   initialTeams = [],
   initialCountry = "fr",
@@ -273,22 +369,7 @@ export default function WDC2026Client({
                 <span className="w-5 h-5 rounded-full bg-lime-400/20 text-lime-400 flex items-center justify-center text-[10px] font-bold">2</span>
                 Your country <span className="text-white/25 normal-case font-normal tracking-normal">for TV info</span>
               </label>
-              <div className="flex flex-wrap gap-2">
-                {allCountries.map((c) => (
-                  <button
-                    key={c.code}
-                    onClick={() => setSelectedCountry(c.code)}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-medium transition-all cursor-pointer ${
-                      selectedCountry === c.code
-                        ? "bg-lime-400/15 border-lime-400/50 text-lime-300"
-                        : "bg-white/5 border-white/10 text-white/50 hover:text-white/80 hover:border-white/20"
-                    }`}
-                  >
-                    <span>{c.flag}</span>
-                    <span>{c.label}</span>
-                  </button>
-                ))}
-              </div>
+              <CountryDropdown selected={selectedCountry} onSelect={setSelectedCountry} />
             </div>
 
             {/* Divider */}

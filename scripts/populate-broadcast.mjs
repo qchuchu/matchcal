@@ -1,14 +1,23 @@
 #!/usr/bin/env node
 /**
- * One-shot script to populate broadcast data for FR, UK, ES.
- * Also fixes US channel meta keys to match ESPN shortNames (FOX, Tele, FS1).
+ * One-shot script to populate broadcast data for every World Cup 2026 nation.
  *
- * FR: per-game accuracy from Eurosport schedule (M6 free + beIN pay, or beIN only)
- * UK: BBC + ITV for all games (both hold rights, split coverage)
- * ES: RTVE + Cuatro for all games (both hold rights)
+ * Source of broadcasters: Wikipedia "2026 FIFA World Cup broadcasting rights"
+ * (per-territory rights holders), cross-checked against official broadcaster
+ * schedules for the countries where coverage is split free vs pay per game.
  *
- * The sync script (sync-fixtures.mjs) already preserves non-US broadcast data,
- * so running it after this script will NOT overwrite FR/UK/ES.
+ * Precision model:
+ *   - FR, SG, MX: per-game free/pay split sourced from the official broadcaster
+ *     schedules (Eurosport / CNA-Mediacorp / TUDN). A free channel shows a
+ *     subset, a pay platform shows all 104.
+ *   - AR, PT: free national channel for that nation's games + the late knockouts,
+ *     pay platform for the rest.
+ *   - US: per-game channels come from the ESPN sync (FOX/Tele/FS1); not touched here.
+ *   - All other nations: one or more rights holders carry all 104 games, so the
+ *     same channels apply to every game (uniform, but still accurate).
+ *
+ * The GitHub-action sync (sync-fixtures.mjs) preserves every non-US region,
+ * so running it after this script will NOT overwrite any of this.
  *
  * Run once: node scripts/populate-broadcast.mjs
  */
@@ -19,187 +28,167 @@ import { dirname, join } from "path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_PATH = join(__dirname, "../data/wdc-2026.json");
-
 const data = JSON.parse(readFileSync(DATA_PATH, "utf-8"));
 
-// ─── 1. Fix US channel meta keys to match ESPN shortNames ────────────────────
-// ESPN returns FOX, Tele, FS1, Peacock — not Fox/Telemundo
-data.broadcast.us.channels = {
-  FOX:     { name: "Fox Sports",  free: false, url: "https://foxsports.com" },
-  Tele:    { name: "Telemundo",   free: false, url: "https://telemundo.com" },
-  FS1:     { name: "FS1",         free: false, url: "https://foxsports.com" },
-  Peacock: { name: "Peacock",     free: false, url: "https://peacocktv.com" },
+const c = (name, free, url = "") => ({ name, free, url });
+
+// ─── Broadcast meta: every territory of a participating nation ───────────────
+// free: true  = free-to-air   |   free: false = pay TV / subscription
+const META = {
+  // --- already had precise / curated data ---
+  fr: { label: "France", flag: "🇫🇷", channels: {
+    M6: c("M6", true, "https://m6.fr"), beIN: c("beIN Sports", false, "https://beinsports.com") } },
+  uk: { label: "United Kingdom", flag: "🇬🇧", channels: {
+    BBC: c("BBC", true, "https://bbc.co.uk/sport"), ITV: c("ITV / STV", true, "https://itv.com") } },
+  us: { label: "United States", flag: "🇺🇸", channels: {
+    FOX: c("Fox Sports", false, "https://foxsports.com"), Tele: c("Telemundo", false, "https://telemundo.com"),
+    FS1: c("FS1", false, "https://foxsports.com"), Peacock: c("Peacock", false, "https://peacocktv.com") } },
+  es: { label: "Spain", flag: "🇪🇸", channels: {
+    RTVE: c("RTVE", true, "https://rtve.es"), DAZN: c("DAZN", false, "https://dazn.com") } },
+  de: { label: "Germany", flag: "🇩🇪", channels: {
+    ARD: c("ARD", true, "https://ard.de"), ZDF: c("ZDF", true, "https://zdf.de"),
+    Magenta: c("Magenta Sport", false, "https://magentasport.de") } },
+  br: { label: "Brazil", flag: "🇧🇷", channels: {
+    Globo: c("TV Globo", true, "https://globo.com"), CazeTV: c("CazéTV", true, "https://youtube.com"),
+    SporTV: c("SporTV", false, "https://sportv.globo.com") } },
+  ar: { label: "Argentina", flag: "🇦🇷", channels: {
+    Telefe: c("Telefe", true, "https://telefe.com"), TVPublica: c("TV Pública", true, "https://tvpublica.com.ar"),
+    TyC: c("TyC Sports", false, "https://tycsports.com") } },
+  pt: { label: "Portugal", flag: "🇵🇹", channels: {
+    RTP: c("RTP", true, "https://rtp.pt"), SportTV: c("Sport TV", false, "https://sporttv.pt") } },
+  sg: { label: "Singapore", flag: "🇸🇬", channels: {
+    Ch5: c("Mediacorp Ch 5", true, "https://www.mewatch.sg/fifaworldcup"),
+    meWatch: c("mewatch", false, "https://www.mewatch.sg/fifaworldcup"),
+    StarHub: c("StarHub", false, "https://www.starhub.com") } },
+  mx: { label: "Mexico", flag: "🇲🇽", channels: {
+    Canal5: c("Canal 5", true, "https://canal5.com"), Azteca7: c("Azteca 7", true, "https://www.aztecadeportes.com"),
+    ViX: c("ViX", false, "https://www.vix.com"), TUDN: c("TUDN", false, "https://www.tudn.com") } },
+
+  // --- one or more rights holders carry all 104 games (uniform) ---
+  dz: { label: "Algeria", flag: "🇩🇿", channels: { ENTV: c("ENTV", true, "https://entv.dz") } },
+  au: { label: "Australia", flag: "🇦🇺", channels: { SBS: c("SBS", true, "https://sbs.com.au") } },
+  at: { label: "Austria", flag: "🇦🇹", channels: {
+    ORF: c("ORF", true, "https://orf.at"), ServusTV: c("ServusTV", true, "https://servustv.com") } },
+  be: { label: "Belgium", flag: "🇧🇪", channels: {
+    VRT: c("VRT", true, "https://vrt.be"), RTBF: c("RTBF", true, "https://rtbf.be") } },
+  ba: { label: "Bosnia-Herzegovina", flag: "🇧🇦", channels: {
+    BHRT: c("BHRT", true, "https://bhrt.ba"), Arena: c("Arena Sport", false, "https://arenasport.com") } },
+  ca: { label: "Canada", flag: "🇨🇦", channels: {
+    CTV: c("CTV", true, "https://ctv.ca"), TSN: c("TSN", false, "https://tsn.ca") } },
+  cv: { label: "Cape Verde", flag: "🇨🇻", channels: { RTC: c("RTC", true, "https://rtc.cv") } },
+  co: { label: "Colombia", flag: "🇨🇴", channels: {
+    Caracol: c("Caracol", true, "https://caracoltv.com"), RCN: c("RCN", true, "https://canalrcn.com"),
+    Win: c("Win Sports", false, "https://winsports.co") } },
+  cd: { label: "Congo DR", flag: "🇨🇩", channels: { RTNC: c("RTNC", true) } },
+  hr: { label: "Croatia", flag: "🇭🇷", channels: { HRT: c("HRT", true, "https://hrt.hr") } },
+  cw: { label: "Curaçao", flag: "🇨🇼", channels: { Nos: c("Nos País TV", true) } },
+  cz: { label: "Czechia", flag: "🇨🇿", channels: {
+    CT: c("ČT Sport", true, "https://ct.cz"), Nova: c("TV Nova", true, "https://nova.cz") } },
+  ec: { label: "Ecuador", flag: "🇪🇨", channels: { Teleamazonas: c("Teleamazonas", true, "https://teleamazonas.com") } },
+  eg: { label: "Egypt", flag: "🇪🇬", channels: { beIN: c("beIN Sports", false, "https://beinsports.com") } },
+  gh: { label: "Ghana", flag: "🇬🇭", channels: { GBC: c("GBC", true, "https://gbcghana.tv") } },
+  ht: { label: "Haiti", flag: "🇭🇹", channels: {
+    TNH: c("TNH", true), CanalPlus: c("Canal+", false, "https://canalplus.com") } },
+  ir: { label: "Iran", flag: "🇮🇷", channels: { IRIB: c("IRIB", true, "https://irib.ir") } },
+  iq: { label: "Iraq", flag: "🇮🇶", channels: { beIN: c("beIN Sports", false, "https://beinsports.com") } },
+  ci: { label: "Ivory Coast", flag: "🇨🇮", channels: { RTI: c("RTI", true, "https://rti.ci") } },
+  jp: { label: "Japan", flag: "🇯🇵", channels: {
+    NHK: c("NHK", true, "https://nhk.or.jp"), FujiTV: c("Fuji TV", true), DAZN: c("DAZN", false, "https://dazn.com") } },
+  jo: { label: "Jordan", flag: "🇯🇴", channels: { beIN: c("beIN Sports", false, "https://beinsports.com") } },
+  ma: { label: "Morocco", flag: "🇲🇦", channels: { SNRT: c("SNRT", true, "https://snrt.ma") } },
+  nl: { label: "Netherlands", flag: "🇳🇱", channels: { NOS: c("NOS", true, "https://nos.nl") } },
+  nz: { label: "New Zealand", flag: "🇳🇿", channels: { TVNZ: c("TVNZ", true, "https://tvnz.co.nz") } },
+  no: { label: "Norway", flag: "🇳🇴", channels: {
+    NRK: c("NRK", true, "https://nrk.no"), TV2: c("TV2", false, "https://tv2.no") } },
+  pa: { label: "Panama", flag: "🇵🇦", channels: {
+    RPC: c("RPC", true, "https://rpctv.com"), Tigo: c("Tigo Sports", false, "https://tigosports.com.pa") } },
+  py: { label: "Paraguay", flag: "🇵🇾", channels: {
+    Trece: c("Trece", true, "https://trecepy.com"), GEN: c("GEN", true, "https://gen.com.py") } },
+  qa: { label: "Qatar", flag: "🇶🇦", channels: {
+    Alkass: c("Alkass", true, "https://alkass.net"), beIN: c("beIN Sports", false, "https://beinsports.com") } },
+  sa: { label: "Saudi Arabia", flag: "🇸🇦", channels: { beIN: c("beIN Sports", false, "https://beinsports.com") } },
+  sn: { label: "Senegal", flag: "🇸🇳", channels: { RTS: c("RTS", true, "https://rts.sn") } },
+  za: { label: "South Africa", flag: "🇿🇦", channels: {
+    SABC: c("SABC", true, "https://sabc.co.za"), SuperSport: c("SuperSport", false, "https://supersport.com") } },
+  kr: { label: "South Korea", flag: "🇰🇷", channels: {
+    KBS: c("KBS", true, "https://kbs.co.kr"), JTBC: c("JTBC", true, "https://jtbc.co.kr") } },
+  se: { label: "Sweden", flag: "🇸🇪", channels: {
+    SVT: c("SVT", true, "https://svt.se"), TV4: c("TV4", false, "https://tv4.se") } },
+  ch: { label: "Switzerland", flag: "🇨🇭", channels: { SRG: c("SRF / RTS", true, "https://srf.ch") } },
+  tn: { label: "Tunisia", flag: "🇹🇳", channels: { beIN: c("beIN Sports", false, "https://beinsports.com") } },
+  tr: { label: "Türkiye", flag: "🇹🇷", channels: { TRT: c("TRT", true, "https://trt.net.tr") } },
+  uy: { label: "Uruguay", flag: "🇺🇾", channels: {
+    Canal5: c("Canal 5", true), Antel: c("Antel TV", false, "https://antel.com.uy") } },
+  uz: { label: "Uzbekistan", flag: "🇺🇿", channels: { ZorTV: c("Zo'r TV", true) } },
 };
 
-// Singapore meta (not in the original JSON) — Mediacorp Ch 5 + mewatch + StarHub
-data.broadcast.sg = {
-  label: "Singapore",
-  flag: "🇸🇬",
-  channels: {
-    Ch5:     { name: "Mediacorp Ch 5", free: true,  url: "https://www.mewatch.sg/fifaworldcup" },
-    meWatch: { name: "mewatch",        free: false, url: "https://www.mewatch.sg/fifaworldcup" },
-    StarHub: { name: "StarHub",        free: false, url: "https://www.starhub.com" },
-  },
-};
+// ─── Per-game free-to-air subsets (only where coverage is split) ─────────────
+const isLateKnockout = (g) => ["semi_final", "third_place", "final"].includes(g.phase);
+const pair = (g) => [g.home, g.away].sort().join("-");
+const sp = (a, b) => [a, b].sort().join("-");
 
-// Mexico meta (not in the original JSON) — open TV (Televisa/TV Azteca) + ViX streaming
-data.broadcast.mx = {
-  label: "Mexico",
-  flag: "🇲🇽",
-  channels: {
-    Canal5:  { name: "Canal 5",  free: true,  url: "https://canal5.com" },
-    Azteca7: { name: "Azteca 7", free: true,  url: "https://www.aztecadeportes.com" },
-    ViX:     { name: "ViX",      free: false, url: "https://www.vix.com" },
-    TUDN:    { name: "TUDN",     free: false, url: "https://www.tudn.com" },
-  },
-};
-
-// ─── 2. FR — per-game data from Eurosport (published 15 Jun 2026) ────────────
-// Source: https://www.eurosport.fr/football/coupe-du-monde/2026/...
-//
-// Rule: 54 games on M6 (free), ALL 104 on beIN Sports (pay)
-// Knockouts: M6 gets France's games + best affiches; semis/3rd/final always M6
-//
-// Games confirmed on M6 from the schedule (group stage, from Jun 15):
+// FR — 32 games free on M6 (Eurosport schedule); all 104 on beIN.
 const FR_M6 = new Set([
-  // Jun 15
-  "ESP-CPV", "BEL-EGY",
-  // Jun 16
-  "KSA-URU", "FRA-SEN",
-  // Jun 17
-  "IRQ-NOR", "POR-COD", "ENG-CRO",
-  // Jun 18
-  "CZE-RSA", "SUI-BIH",
-  // Jun 19
-  "USA-AUS",
-  // Jun 20
-  "SCO-MAR", "BRA-HAI", "NED-SWE", "GER-CIV",
-  // Jun 21
-  "ESP-KSA", "BEL-IRN",
-  // Jun 22
-  "ARG-AUT", "FRA-IRQ",
-  // Jun 23
-  "POR-UZB", "ENG-GHA",
-  // Jun 24
-  "SUI-CAN",
-  // Jun 25
-  "SCO-BRA", "ECU-GER",
-  // Jun 26
-  "TUN-NED", "NOR-FRA",
-  // Jun 27
-  "URU-ESP", "PAN-ENG",
-  // Jun 28
-  "COL-POR",
+  "ESP-CPV", "BEL-EGY", "KSA-URU", "FRA-SEN", "IRQ-NOR", "POR-COD", "ENG-CRO",
+  "CZE-RSA", "SUI-BIH", "USA-AUS", "SCO-MAR", "BRA-HAI", "NED-SWE", "GER-CIV",
+  "ESP-KSA", "BEL-IRN", "ARG-AUT", "FRA-IRQ", "POR-UZB", "ENG-GHA", "SUI-CAN",
+  "SCO-BRA", "ECU-GER", "TUN-NED", "NOR-FRA", "URU-ESP", "PAN-ENG", "COL-POR",
 ]);
-
-// ─── SG — the 24 group matches free-to-air on Mediacorp Channel 5 ────────────
-// Source: CNA "Where to watch FIFA World Cup 2026" (Mediacorp official).
-// 28 free total = these 24 group games + both semis + 3rd place + final.
-// Matched as sorted team-code pairs so home/away ordering can't break it.
-const sgFreePair = (a, b) => [a, b].sort().join("-");
+// SG — 28 free on Mediacorp Ch 5 (CNA): these 24 group games + semis/3rd/final.
 const SG_FTA_GROUP = new Set([
-  sgFreePair("MEX", "RSA"), sgFreePair("KOR", "CZE"), sgFreePair("USA", "PAR"),
-  sgFreePair("AUS", "TUR"), sgFreePair("GER", "CUW"), sgFreePair("CIV", "ECU"),
-  sgFreePair("BEL", "EGY"), sgFreePair("IRN", "NZL"), sgFreePair("ARG", "ALG"),
-  sgFreePair("AUT", "JOR"), sgFreePair("POR", "COD"), sgFreePair("UZB", "COL"),
-  sgFreePair("SUI", "BIH"), sgFreePair("CAN", "QAT"), sgFreePair("SCO", "MAR"),
-  sgFreePair("BRA", "HAI"), sgFreePair("NED", "SWE"), sgFreePair("TUN", "JPN"),
-  sgFreePair("ESP", "KSA"), sgFreePair("URU", "CPV"), sgFreePair("FRA", "IRQ"),
-  sgFreePair("NOR", "SEN"), sgFreePair("ENG", "GHA"), sgFreePair("PAN", "CRO"),
+  sp("MEX","RSA"), sp("KOR","CZE"), sp("USA","PAR"), sp("AUS","TUR"), sp("GER","CUW"),
+  sp("CIV","ECU"), sp("BEL","EGY"), sp("IRN","NZL"), sp("ARG","ALG"), sp("AUT","JOR"),
+  sp("POR","COD"), sp("UZB","COL"), sp("SUI","BIH"), sp("CAN","QAT"), sp("SCO","MAR"),
+  sp("BRA","HAI"), sp("NED","SWE"), sp("TUN","JPN"), sp("ESP","KSA"), sp("URU","CPV"),
+  sp("FRA","IRQ"), sp("NOR","SEN"), sp("ENG","GHA"), sp("PAN","CRO"),
 ]);
-
-// ─── MX — the 17 group matches free-to-air on open TV (Canal 5 / Azteca 7) ───
-// Source: TUDN "Calendario Mundial 2026: los partidos que van por TV abierta y por ViX".
-// ~32 free total across the tournament; the 17 mappable group games are listed here.
-// Knockout free picks are bracket-slot/conditional ("en caso de ser México"), so the
-// loop only adds semis + 3rd place + final as free; everything else defaults to ViX.
-const mxFreePair = (a, b) => [a, b].sort().join("-");
+// MX — ~32 free on open TV (TUDN): these 17 group games + semis/3rd/final.
 const MX_FTA_GROUP = new Set([
-  mxFreePair("MEX", "RSA"), mxFreePair("USA", "PAR"), mxFreePair("BRA", "MAR"),
-  mxFreePair("NED", "JPN"), mxFreePair("ARG", "ALG"), mxFreePair("ENG", "CRO"),
-  mxFreePair("MEX", "KOR"), mxFreePair("BRA", "HAI"), mxFreePair("NED", "SWE"),
-  mxFreePair("ESP", "KSA"), mxFreePair("NOR", "SEN"), mxFreePair("COL", "COD"),
-  mxFreePair("CZE", "MEX"), mxFreePair("ECU", "GER"), mxFreePair("URU", "ESP"),
-  mxFreePair("PAN", "ENG"), mxFreePair("COL", "POR"),
+  sp("MEX","RSA"), sp("USA","PAR"), sp("BRA","MAR"), sp("NED","JPN"), sp("ARG","ALG"),
+  sp("ENG","CRO"), sp("MEX","KOR"), sp("BRA","HAI"), sp("NED","SWE"), sp("ESP","KSA"),
+  sp("NOR","SEN"), sp("COL","COD"), sp("CZE","MEX"), sp("ECU","GER"), sp("URU","ESP"),
+  sp("PAN","ENG"), sp("COL","POR"),
 ]);
 
-// ─── 3. Apply to all games ────────────────────────────────────────────────────
-let frM6Count = 0, frBeINCount = 0;
-let sgFreeCount = 0;
-let mxFreeCount = 0;
+function channelsForGame(code, game) {
+  const all = Object.keys(META[code].channels);
+  switch (code) {
+    case "fr":
+      return (FR_M6.has(`${game.home}-${game.away}`) || isLateKnockout(game)) ? ["M6", "beIN"] : ["beIN"];
+    case "sg":
+      return (SG_FTA_GROUP.has(pair(game)) || isLateKnockout(game)) ? ["Ch5", "meWatch", "StarHub"] : ["meWatch", "StarHub"];
+    case "mx":
+      return (MX_FTA_GROUP.has(pair(game)) || isLateKnockout(game)) ? ["Canal5", "Azteca7", "ViX"] : ["ViX"];
+    case "ar":
+      return (game.home === "ARG" || game.away === "ARG" || isLateKnockout(game)) ? ["Telefe", "TVPublica", "TyC"] : ["TyC"];
+    case "pt":
+      return (game.home === "POR" || game.away === "POR" || isLateKnockout(game)) ? ["RTP", "SportTV"] : ["SportTV"];
+    default:
+      return all; // uniform: this nation's broadcaster(s) carry every game
+  }
+}
 
+// ─── Apply ───────────────────────────────────────────────────────────────────
+// 1. Rebuild broadcast meta from META (source of truth).
+data.broadcast = Object.fromEntries(
+  Object.entries(META).map(([code, m]) => [code, { label: m.label, flag: m.flag, channels: m.channels }])
+);
+
+// 2. Set per-game channels for every territory except US (US comes from ESPN sync).
 for (const game of data.games) {
   if (!game.broadcast) game.broadcast = {};
-
-  const key = `${game.home}-${game.away}`;
-
-  // France
-  if (game.phase === "group") {
-    if (FR_M6.has(key)) {
-      game.broadcast.fr = ["M6", "beIN"];
-      frM6Count++;
-    } else {
-      game.broadcast.fr = ["beIN"];
-      frBeINCount++;
-    }
-  } else if (["semi_final", "third_place", "final"].includes(game.phase)) {
-    // Always on M6 (confirmed free-to-air for all semis/3rd/final)
-    game.broadcast.fr = ["M6", "beIN"];
-    frM6Count++;
-  } else {
-    // round_of_32, round_of_16, quarter_final: M6 shows France + best, unknown in advance
-    game.broadcast.fr = ["beIN"];
-    frBeINCount++;
+  for (const code of Object.keys(META)) {
+    if (code === "us") continue; // preserve ESPN-sourced US channels
+    game.broadcast[code] = channelsForGame(code, game);
   }
-
-  // United Kingdom — BBC and ITV both hold rights and split coverage
-  game.broadcast.uk = ["BBC", "ITV"];
-
-  // Spain — RTVE (La 1) and Cuatro/Mediaset both hold rights
-  game.broadcast.es = ["RTVE", "Cuatro"];
-
-  // Germany — ARD and ZDF share free-to-air rights (alternating games, both public)
-  game.broadcast.de = ["ARD", "ZDF"];
-
-  // Brazil — TV Globo (free) + SporTV (pay, Globo's sports channel)
-  game.broadcast.br = ["Globo", "SporTV"];
-
-  // Argentina — TyC Sports (pay, all games) + TV Pública (free, Argentina games only)
-  const argGame = game.home === "ARG" || game.away === "ARG";
-  game.broadcast.ar = argGame ? ["TyC", "TV Pública"] : ["TyC"];
-
-  // Portugal — Sport TV (pay, all games) + RTP (free, Portugal games + major knockouts)
-  const porGame = game.home === "POR" || game.away === "POR";
-  const majorKnockout = ["semi_final", "third_place", "final"].includes(game.phase);
-  game.broadcast.pt = (porGame || majorKnockout) ? ["RTP", "Sport TV"] : ["Sport TV"];
-
-  // Singapore — mewatch + StarHub carry all 104 (pay); 28 are also free on Mediacorp Ch 5
-  const sgFree =
-    SG_FTA_GROUP.has(`${[game.home, game.away].sort().join("-")}`) ||
-    ["semi_final", "third_place", "final"].includes(game.phase);
-  game.broadcast.sg = sgFree ? ["Ch5", "meWatch", "StarHub"] : ["meWatch", "StarHub"];
-  if (sgFree) sgFreeCount++;
-
-  // Mexico — ViX carries all 104 (pay); ~32 are free on open TV (Canal 5 / Azteca 7)
-  const mxFree =
-    MX_FTA_GROUP.has(`${[game.home, game.away].sort().join("-")}`) ||
-    ["semi_final", "third_place", "final"].includes(game.phase);
-  game.broadcast.mx = mxFree ? ["Canal5", "Azteca7", "ViX"] : ["ViX"];
-  if (mxFree) mxFreeCount++;
 }
 
 writeFileSync(DATA_PATH, JSON.stringify(data, null, 2));
 
-console.log("✓ Broadcast data written to data/wdc-2026.json");
-console.log(`  🇺🇸 US: meta keys fixed (FOX, Tele, FS1, Peacock)`);
-console.log(`  🇫🇷 FR: ${frM6Count} games on M6+beIN · ${frBeINCount} games on beIN only`);
-console.log(`  🇬🇧 UK: all ${data.games.length} games → BBC + ITV`);
-console.log(`  🇪🇸 ES: all ${data.games.length} games → RTVE + Cuatro`);
-console.log(`  🇩🇪 DE: all ${data.games.length} games → ARD + ZDF`);
-console.log(`  🇧🇷 BR: all ${data.games.length} games → Globo + SporTV`);
-const argGames = data.games.filter(g => g.home === "ARG" || g.away === "ARG").length;
-console.log(`  🇦🇷 AR: ${argGames} Argentina games → TyC + TV Pública · rest → TyC only`);
-const porGames = data.games.filter(g => g.home === "POR" || g.away === "POR" || ["semi_final","third_place","final"].includes(g.phase)).length;
-console.log(`  🇵🇹 PT: ${porGames} games → RTP + Sport TV · rest → Sport TV only`);
-console.log(`  🇸🇬 SG: ${sgFreeCount} games free on Mediacorp Ch 5 · all 104 → mewatch + StarHub`);
-console.log(`  🇲🇽 MX: ${mxFreeCount} games free on Canal 5 / Azteca 7 · all 104 → ViX`);
+const total = Object.keys(META).length;
+const frFree = data.games.filter((g) => g.broadcast.fr.includes("M6")).length;
+const sgFree = data.games.filter((g) => g.broadcast.sg.includes("Ch5")).length;
+const mxFree = data.games.filter((g) => g.broadcast.mx.includes("Canal5")).length;
+console.log(`✓ Broadcast data written for ${total} territories across ${data.games.length} games`);
+console.log(`  Per-game free/pay split: FR (${frFree} free on M6), SG (${sgFree} on Ch 5), MX (${mxFree} on open TV), AR & PT (nation's games)`);
+console.log(`  US channels preserved from ESPN sync; all other nations: rights holder(s) on every game`);
