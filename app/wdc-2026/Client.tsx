@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Script from "next/script";
 import { allTeams, allCountries } from "@/lib/fixtures";
 
 const GOOGLE_CAL_BASE = "https://calendar.google.com/calendar/r?cid=";
@@ -203,6 +204,22 @@ export default function WDC2026Client({
     track("copy");
   };
 
+  const openFeedback = (e: React.MouseEvent) => {
+    const tally = (window as Window & {
+      Tally?: { openPopup: (id: string, opts?: Record<string, unknown>) => void };
+    }).Tally;
+    if (tally) {
+      e.preventDefault();
+      tally.openPopup("68VV65", {
+        layout: "modal",
+        width: 540,
+        emoji: { text: "📣", animation: "wave" },
+        autoClose: 2000,
+      });
+    }
+    // If the embed script is blocked/not loaded, the <a href> opens the form in a new tab.
+  };
+
   const ready = selectedTeams.length > 0;
 
   return (
@@ -351,14 +368,27 @@ export default function WDC2026Client({
             ))}
           </div>
 
-          <footer className="flex items-center justify-between text-[11px] text-white/20 pt-1">
-            <span>Not affiliated with FIFA</span>
-            <Link href="/wdc-2026/games" className="hover:text-white/50 transition-colors">
-              All games →
-            </Link>
+          <footer className="space-y-3 pt-1">
+            <a
+              href="https://tally.so/r/68VV65"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={openFeedback}
+              className="block w-full text-center text-xs text-white/45 hover:text-lime-300 border border-white/10 hover:border-lime-400/30 rounded-lg py-2.5 transition-colors cursor-pointer"
+            >
+              📣 Missing your country’s channels? Tell us →
+            </a>
+            <div className="flex items-center justify-between text-[11px] text-white/20">
+              <span>Not affiliated with FIFA</span>
+              <Link href="/wdc-2026/games" className="hover:text-white/50 transition-colors">
+                All games →
+              </Link>
+            </div>
           </footer>
         </div>
       </div>
+
+      <Script src="https://tally.so/widgets/embed.js" strategy="lazyOnload" />
     </main>
   );
 }
