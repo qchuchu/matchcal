@@ -4140,8 +4140,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      }
     },
     {
       "id": "gs-017",
