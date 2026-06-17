@@ -3560,8 +3560,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     },
     {
       "id": "gs-014",
@@ -3751,8 +3754,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      }
     },
     {
       "id": "gs-015",
@@ -3941,8 +3947,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      }
     },
     {
       "id": "gs-016",
@@ -4131,8 +4140,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      }
     },
     {
       "id": "gs-017",
@@ -4321,8 +4333,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      }
     },
     {
       "id": "gs-018",
@@ -4511,8 +4526,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 4
+      }
     },
     {
       "id": "gs-019",
@@ -4705,8 +4723,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      }
     },
     {
       "id": "gs-020",
@@ -4895,8 +4916,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      }
     },
     {
       "id": "gs-021",
