@@ -4723,8 +4723,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      }
     },
     {
       "id": "gs-020",
@@ -4913,8 +4916,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      }
     },
     {
       "id": "gs-021",
