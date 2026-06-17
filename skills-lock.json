@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "mcp-app-builder": {
+      "source": "alpic-ai/skybridge",
+      "sourceType": "github",
+      "skillPath": "skills/mcp-app-builder/SKILL.md",
+      "computedHash": "7b2e179ff0dfb59c850f3a701f645e24df49311f0d5fe1f2fd58c47c68cdd346"
+    }
+  }
+}

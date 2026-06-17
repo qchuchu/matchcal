@@ -35,20 +35,53 @@ function foldLine(line: string): string {
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const teamsParam = searchParams.get("teams") ?? "";
+  const gamesParam = searchParams.get("games") ?? "";
+  const excludeParam = searchParams.get("exclude") ?? "";
+  const hasExcludeParam = searchParams.has("exclude");
   const country = searchParams.get("country") ?? "fr";
+  const now = new Date();
 
   const teams = teamsParam
     .split(",")
     .map((t) => t.trim().toUpperCase())
     .filter(Boolean);
 
-  if (teams.length === 0) {
-    return new NextResponse("Missing teams parameter", { status: 400 });
+  const gameIds = gamesParam
+    .split(",")
+    .map((id) => id.trim())
+    .filter(Boolean);
+
+  const excludedGameIds = excludeParam
+    .split(",")
+    .map((id) => id.trim())
+    .filter(Boolean);
+
+  if (teams.length === 0 && gameIds.length === 0 && !hasExcludeParam) {
+    return new NextResponse("Missing teams, games, or exclude parameter", { status: 400 });
   }
 
-  const games = getGamesForTeams(teams);
+  const gameIdSet = new Set(gameIds);
+  const excludedGameIdSet = new Set(excludedGameIds);
+  const games =
+    gameIds.length > 0
+      ? competitionData.games.filter((game) => gameIdSet.has(game.id))
+      : (teams.length > 0 ? getGamesForTeams(teams) : competitionData.games).filter(
+          (game) => !excludedGameIdSet.has(game.id)
+        );
+  const upcomingGames = games.filter((game) => getGameStartUTC(game) >= now);
+
+  if (upcomingGames.length === 0) {
+    return new NextResponse("No games found", { status: 404 });
+  }
+
   const countryBroadcast = competitionData.broadcast[country as keyof typeof competitionData.broadcast];
   const countryLabel = countryBroadcast?.label ?? country.toUpperCase();
+  const calendarLabel =
+    teams.length > 0
+      ? teams.join(", ")
+      : gameIds.length > 0
+      ? `${upcomingGames.length} selected game${upcomingGames.length === 1 ? "" : "s"}`
+      : "all games";
 
   const lines: string[] = [
     "BEGIN:VCALENDAR",
@@ -56,12 +89,12 @@ export async function GET(req: NextRequest) {
     `PRODID:-//MatchCal//WDC 2026//EN`,
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
-    `X-WR-CALNAME:WDC 2026 — ${teams.join(", ")}`,
+    `X-WR-CALNAME:WDC 2026 — ${calendarLabel}`,
     `X-WR-TIMEZONE:UTC`,
-    `X-WR-CALDESC:FIFA World Cup 2026 matches for ${teams.join(", ")} — Watch info for ${countryLabel}`,
+    `X-WR-CALDESC:FIFA World Cup 2026 matches for ${calendarLabel} — Watch info for ${countryLabel}`,
   ];
 
-  for (const game of games) {
+  for (const game of upcomingGames) {
     const start = getGameStartUTC(game);
     const end = new Date(start.getTime() + 2 * 60 * 60 * 1000); // +2h
     const title = `⚽ ${getGameTitle(game)}`;
@@ -109,7 +142,7 @@ export async function GET(req: NextRequest) {
   return new NextResponse(body, {
     headers: {
       "Content-Type": "text/calendar; charset=utf-8",
-      "Content-Disposition": `attachment; filename="wdc-2026-${teams.join("-")}.ics"`,
+      "Content-Disposition": `attachment; filename="wdc-2026-${teams.length > 0 ? teams.join("-") : "selected"}.ics"`,
       "Cache-Control": "no-cache, no-store, must-revalidate",
       "Access-Control-Allow-Origin": "*",
     },
