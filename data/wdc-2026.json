@@ -5883,8 +5883,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      }
     },
     {
       "id": "gs-026",
