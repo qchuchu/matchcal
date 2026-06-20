@@ -7047,9 +7047,9 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
-        "home": 0,
+        "home": 3,
         "away": 0
       }
     },
@@ -7239,8 +7239,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      }
     },
     {
       "id": "gs-033",
@@ -16542,9 +16545,9 @@
       "date": "2026-07-02",
       "time": "00:00",
       "timezone": "UTC",
-      "home": "1D",
+      "home": "USA",
       "away": "3RD",
-      "homeTeam": "Group D Winner",
+      "homeTeam": "United States",
       "awayTeam": "Third Place Group B/E/F/I/J",
       "venue": "levis",
       "venueCity": "Santa Clara, California",
