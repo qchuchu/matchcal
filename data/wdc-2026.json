@@ -7434,9 +7434,9 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
-        "home": 4,
+        "home": 5,
         "away": 1
       }
     },
@@ -7627,8 +7627,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      }
     },
     {
       "id": "gs-035",
@@ -7816,8 +7819,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "live",
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     },
     {
       "id": "gs-036",
@@ -10312,8 +10318,7 @@
       "venueCity": "Seattle, Washington",
       "broadcast": {
         "us": [
-          "FS1",
-          "Tele"
+          "FS1"
         ],
         "fr": [
           "beIN"
@@ -10691,8 +10696,7 @@
       "venueCity": "Atlanta, Georgia",
       "broadcast": {
         "us": [
-          "FS1",
-          "Tele"
+          "FS1"
         ],
         "fr": [
           "beIN"
@@ -11260,8 +11264,7 @@
       "venueCity": "Guadalupe",
       "broadcast": {
         "us": [
-          "FS1",
-          "Tele"
+          "FS1"
         ],
         "fr": [
           "beIN"
@@ -11449,8 +11452,7 @@
       "venueCity": "Philadelphia, Pennsylvania",
       "broadcast": {
         "us": [
-          "FS1",
-          "Tele"
+          "FS1"
         ],
         "fr": [
           "beIN"
@@ -11830,8 +11832,7 @@
       "venueCity": "Arlington, Texas",
       "broadcast": {
         "us": [
-          "FS1",
-          "Tele"
+          "FS1"
         ],
         "fr": [
           "beIN"
@@ -12209,8 +12210,7 @@
       "venueCity": "Santa Clara, California",
       "broadcast": {
         "us": [
-          "FS1",
-          "Tele"
+          "FS1"
         ],
         "fr": [
           "beIN"
@@ -12777,8 +12777,7 @@
       "venueCity": "Toronto",
       "broadcast": {
         "us": [
-          "FS1",
-          "Tele"
+          "FS1"
         ],
         "fr": [
           "beIN"
@@ -12965,8 +12964,7 @@
       "venueCity": "Houston, Texas",
       "broadcast": {
         "us": [
-          "FS1",
-          "Tele"
+          "FS1"
         ],
         "fr": [
           "beIN"
@@ -13535,8 +13533,7 @@
       "venueCity": "Vancouver",
       "broadcast": {
         "us": [
-          "FOX",
-          "Tele"
+          "FOX"
         ],
         "fr": [
           "beIN"
@@ -13724,8 +13721,7 @@
       "venueCity": "Philadelphia, Pennsylvania",
       "broadcast": {
         "us": [
-          "FS1",
-          "Tele"
+          "FS1"
         ],
         "fr": [
           "beIN"
@@ -14298,8 +14294,7 @@
       "venueCity": "Atlanta, Georgia",
       "broadcast": {
         "us": [
-          "FS1",
-          "Tele"
+          "FS1"
         ],
         "fr": [
           "beIN"
@@ -14487,8 +14482,7 @@
       "venueCity": "Kansas City, Missouri",
       "broadcast": {
         "us": [
-          "FS1",
-          "Tele"
+          "FS1"
         ],
         "fr": [
           "beIN"
