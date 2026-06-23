@@ -9174,8 +9174,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "live",
+      "score": {
+        "home": 3,
+        "away": 0
+      }
     },
     {
       "id": "gs-043",
@@ -9193,7 +9196,7 @@
       "venueCity": "East Rutherford, New Jersey",
       "broadcast": {
         "us": [
-          "FOX",
+          "FS1",
           "Tele"
         ],
         "fr": [
@@ -9366,8 +9369,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "live",
+      "score": {
+        "home": 1,
+        "away": 0
+      }
     },
     {
       "id": "gs-044",
@@ -11850,7 +11856,7 @@
       "venueCity": "Arlington, Texas",
       "broadcast": {
         "us": [
-          "FS1"
+          "FOX"
         ],
         "fr": [
           "beIN"
@@ -12038,7 +12044,7 @@
       "venueCity": "Kansas City, Missouri",
       "broadcast": {
         "us": [
-          "FOX",
+          "FS1",
           "Tele"
         ],
         "fr": [
