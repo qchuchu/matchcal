@@ -9754,9 +9754,9 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
-        "home": 4,
+        "home": 5,
         "away": 0
       }
     },
@@ -9948,8 +9948,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     },
     {
       "id": "gs-047",
@@ -10138,8 +10141,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "live",
+      "score": {
+        "home": 0,
+        "away": 1
+      }
     },
     {
       "id": "gs-048",
