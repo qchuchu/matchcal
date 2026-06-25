@@ -10526,8 +10526,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      }
     },
     {
       "id": "gs-050",
@@ -10716,8 +10719,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      }
     },
     {
       "id": "gs-051",
@@ -10904,8 +10910,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 2
+      }
     },
     {
       "id": "gs-052",
@@ -11094,8 +11103,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 3
+      }
     },
     {
       "id": "gs-053",
@@ -14892,9 +14904,9 @@
       "time": "19:00",
       "timezone": "UTC",
       "home": "2A",
-      "away": "2B",
+      "away": "CAN",
       "homeTeam": "Group A 2nd Place",
-      "awayTeam": "Group B 2nd Place",
+      "awayTeam": "Canada",
       "venue": "sofi",
       "venueCity": "Inglewood, California",
       "broadcast": {
@@ -15079,9 +15091,9 @@
       "date": "2026-06-29",
       "time": "17:00",
       "timezone": "UTC",
-      "home": "1C",
+      "home": "BRA",
       "away": "2F",
-      "homeTeam": "Group C Winner",
+      "homeTeam": "Brazil",
       "awayTeam": "Group F 2nd Place",
       "venueCity": "Houston, Texas",
       "broadcast": {
@@ -15455,9 +15467,9 @@
       "time": "01:00",
       "timezone": "UTC",
       "home": "1F",
-      "away": "2C",
+      "away": "MAR",
       "homeTeam": "Group F Winner",
-      "awayTeam": "Group C 2nd Place",
+      "awayTeam": "Morocco",
       "venueCity": "Guadalupe",
       "broadcast": {
         "us": [
@@ -17145,9 +17157,9 @@
       "date": "2026-07-03",
       "time": "03:00",
       "timezone": "UTC",
-      "home": "1B",
+      "home": "SUI",
       "away": "3RD",
-      "homeTeam": "Group B Winner",
+      "homeTeam": "Switzerland",
       "awayTeam": "Third Place Group E/F/G/I/J",
       "venue": "bcplace",
       "venueCity": "Vancouver",
