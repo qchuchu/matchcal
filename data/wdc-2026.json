@@ -12064,7 +12064,7 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
         "home": 1,
         "away": 1
@@ -12257,7 +12257,7 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
         "home": 1,
         "away": 3
@@ -12448,8 +12448,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     },
     {
       "id": "gs-060",
@@ -12637,8 +12640,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 2
+      }
     },
     {
       "id": "gs-061",
@@ -15110,9 +15116,9 @@
       "time": "17:00",
       "timezone": "UTC",
       "home": "BRA",
-      "away": "2F",
+      "away": "JPN",
       "homeTeam": "Brazil",
-      "awayTeam": "Group F 2nd Place",
+      "awayTeam": "Japan",
       "venueCity": "Houston, Texas",
       "broadcast": {
         "us": [
@@ -15484,9 +15490,9 @@
       "date": "2026-06-30",
       "time": "01:00",
       "timezone": "UTC",
-      "home": "1F",
+      "home": "NED",
       "away": "MAR",
-      "homeTeam": "Group F Winner",
+      "homeTeam": "Netherlands",
       "awayTeam": "Morocco",
       "venueCity": "Guadalupe",
       "broadcast": {
@@ -16612,9 +16618,9 @@
       "time": "00:00",
       "timezone": "UTC",
       "home": "USA",
-      "away": "3RD",
+      "away": "BIH",
       "homeTeam": "United States",
-      "awayTeam": "Third Place Group B/E/F/I/J",
+      "awayTeam": "Bosnia-Herzegovina",
       "venue": "levis",
       "venueCity": "Santa Clara, California",
       "broadcast": {
@@ -17363,9 +17369,9 @@
       "date": "2026-07-03",
       "time": "18:00",
       "timezone": "UTC",
-      "home": "2D",
+      "home": "AUS",
       "away": "2G",
-      "homeTeam": "Group D 2nd Place",
+      "homeTeam": "Australia",
       "awayTeam": "Group G 2nd Place",
       "venue": "att",
       "venueCity": "Arlington, Texas",
