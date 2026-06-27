@@ -13214,7 +13214,7 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
         "home": 0,
         "away": 0
@@ -13409,10 +13409,10 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       }
     },
     {
@@ -13601,8 +13601,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      }
     },
     {
       "id": "gs-066",
@@ -13789,8 +13792,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 5
+      }
     },
     {
       "id": "gs-067",
@@ -15315,9 +15321,9 @@
       "time": "20:30",
       "timezone": "UTC",
       "home": "GER",
-      "away": "3RD",
+      "away": "PAR",
       "homeTeam": "Germany",
-      "awayTeam": "Third Place Group A/B/C/D/F",
+      "awayTeam": "Paraguay",
       "venue": "gillette",
       "venueCity": "Foxborough, Massachusetts",
       "broadcast": {
@@ -15878,9 +15884,9 @@
       "time": "21:00",
       "timezone": "UTC",
       "home": "FRA",
-      "away": "3RD",
+      "away": "SWE",
       "homeTeam": "France",
-      "awayTeam": "Third Place Group C/D/F/G/H",
+      "awayTeam": "Sweden",
       "venue": "metlife",
       "venueCity": "East Rutherford, New Jersey",
       "broadcast": {
@@ -16441,9 +16447,9 @@
       "date": "2026-07-01",
       "time": "20:00",
       "timezone": "UTC",
-      "home": "1G",
+      "home": "BEL",
       "away": "3RD",
-      "homeTeam": "Group G Winner",
+      "homeTeam": "Belgium",
       "awayTeam": "Third Place Group A/E/H/I/J",
       "venue": "centurylink",
       "venueCity": "Seattle, Washington",
@@ -16817,9 +16823,9 @@
       "date": "2026-07-02",
       "time": "19:00",
       "timezone": "UTC",
-      "home": "1H",
+      "home": "ESP",
       "away": "2J",
-      "homeTeam": "Group H Winner",
+      "homeTeam": "Spain",
       "awayTeam": "Group J 2nd Place",
       "venue": "sofi",
       "venueCity": "Inglewood, California",
@@ -17382,9 +17388,9 @@
       "time": "18:00",
       "timezone": "UTC",
       "home": "AUS",
-      "away": "2G",
+      "away": "EGY",
       "homeTeam": "Australia",
-      "awayTeam": "Group G 2nd Place",
+      "awayTeam": "Egypt",
       "venue": "att",
       "venueCity": "Arlington, Texas",
       "broadcast": {
@@ -17570,9 +17576,9 @@
       "time": "22:00",
       "timezone": "UTC",
       "home": "ARG",
-      "away": "2H",
+      "away": "CPV",
       "homeTeam": "Argentina",
-      "awayTeam": "Group H 2nd Place",
+      "awayTeam": "Cape Verde",
       "venue": "hardrock",
       "venueCity": "Miami Gardens, Florida",
       "broadcast": {
