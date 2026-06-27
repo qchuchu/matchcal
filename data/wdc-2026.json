@@ -12833,8 +12833,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 4
+      }
     },
     {
       "id": "gs-062",
@@ -13021,8 +13024,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 5,
+        "away": 0
+      }
     },
     {
       "id": "gs-063",
@@ -13208,8 +13214,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "live",
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     },
     {
       "id": "gs-064",
@@ -13400,8 +13409,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "live",
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     },
     {
       "id": "gs-065",
@@ -15678,9 +15690,9 @@
       "time": "17:00",
       "timezone": "UTC",
       "home": "CIV",
-      "away": "2I",
+      "away": "NOR",
       "homeTeam": "Ivory Coast",
-      "awayTeam": "Group I 2nd Place",
+      "awayTeam": "Norway",
       "venue": "att",
       "venueCity": "Arlington, Texas",
       "broadcast": {
@@ -15865,9 +15877,9 @@
       "date": "2026-06-30",
       "time": "21:00",
       "timezone": "UTC",
-      "home": "1I",
+      "home": "FRA",
       "away": "3RD",
-      "homeTeam": "Group I Winner",
+      "homeTeam": "France",
       "awayTeam": "Third Place Group C/D/F/G/H",
       "venue": "metlife",
       "venueCity": "East Rutherford, New Jersey",
