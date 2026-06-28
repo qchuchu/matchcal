@@ -13983,8 +13983,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      }
     },
     {
       "id": "gs-068",
@@ -14175,8 +14178,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      }
     },
     {
       "id": "gs-069",
@@ -14368,8 +14374,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "live",
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     },
     {
       "id": "gs-070",
@@ -14556,8 +14565,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "live",
+      "score": {
+        "home": 0,
+        "away": 1
+      }
     },
     {
       "id": "gs-071",
@@ -16072,9 +16084,9 @@
       "time": "01:00",
       "timezone": "UTC",
       "home": "MEX",
-      "away": "3RD",
+      "away": "ECU",
       "homeTeam": "Mexico",
-      "awayTeam": "Third Place Group C/E/F/H/I",
+      "awayTeam": "Ecuador",
       "venue": "azteca",
       "venueCity": "Mexico City",
       "broadcast": {
@@ -16259,9 +16271,9 @@
       "date": "2026-07-01",
       "time": "16:00",
       "timezone": "UTC",
-      "home": "1L",
+      "home": "ENG",
       "away": "3RD",
-      "homeTeam": "Group L Winner",
+      "homeTeam": "England",
       "awayTeam": "Third Place Group E/H/I/J/K",
       "venue": "mercedes",
       "venueCity": "Atlanta, Georgia",
@@ -17012,9 +17024,9 @@
       "time": "23:00",
       "timezone": "UTC",
       "home": "2K",
-      "away": "2L",
+      "away": "CRO",
       "homeTeam": "Group K 2nd Place",
-      "awayTeam": "Group L 2nd Place",
+      "awayTeam": "Croatia",
       "venue": "bmo",
       "venueCity": "Toronto",
       "broadcast": {
@@ -17764,9 +17776,9 @@
       "time": "01:30",
       "timezone": "UTC",
       "home": "1K",
-      "away": "3RD",
+      "away": "GHA",
       "homeTeam": "Group K Winner",
-      "awayTeam": "Third Place Group D/E/I/J/L",
+      "awayTeam": "Ghana",
       "venue": "arrowhead",
       "venueCity": "Kansas City, Missouri",
       "broadcast": {
