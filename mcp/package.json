@@ -15,7 +15,7 @@
     "@modelcontextprotocol/sdk": "^1.29.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "skybridge": "^1.1.0",
+    "skybridge": "^1.2.1",
     "vite": "^8.0.3",
     "zod": "^4.4.3"
   },
