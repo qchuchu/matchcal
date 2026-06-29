@@ -15331,8 +15331,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "live",
+      "score": {
+        "home": 1,
+        "away": 1
+      }
     },
     {
       "id": "round-of-32-75",
