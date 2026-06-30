@@ -15331,9 +15331,9 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 1
       }
     },
@@ -15522,8 +15522,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      }
     },
     {
       "id": "round-of-32-76",
@@ -18162,9 +18165,9 @@
       "date": "2026-07-04",
       "time": "21:00",
       "timezone": "UTC",
-      "home": "RD32",
+      "home": "PAR",
       "away": "RD32",
-      "homeTeam": "Round of 32 2 Winner",
+      "homeTeam": "Paraguay",
       "awayTeam": "Round of 32 5 Winner",
       "venue": "lincoln",
       "venueCity": "Philadelphia, Pennsylvania",
@@ -18350,9 +18353,9 @@
       "date": "2026-07-05",
       "time": "20:00",
       "timezone": "UTC",
-      "home": "RD32",
+      "home": "BRA",
       "away": "RD32",
-      "homeTeam": "Round of 32 4 Winner",
+      "homeTeam": "Brazil",
       "awayTeam": "Round of 32 6 Winner",
       "venue": "metlife",
       "venueCity": "East Rutherford, New Jersey",
