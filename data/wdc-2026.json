@@ -15712,8 +15712,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      }
     },
     {
       "id": "round-of-32-77",
@@ -17979,9 +17982,9 @@
       "time": "17:00",
       "timezone": "UTC",
       "home": "CAN",
-      "away": "RD32",
+      "away": "MAR",
       "homeTeam": "Canada",
-      "awayTeam": "Round of 32 3 Winner",
+      "awayTeam": "Morocco",
       "venueCity": "Houston, Texas",
       "broadcast": {
         "us": [
