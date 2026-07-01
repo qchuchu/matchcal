@@ -16476,8 +16476,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      }
     },
     {
       "id": "round-of-32-81",
@@ -18554,9 +18557,9 @@
       "time": "00:00",
       "timezone": "UTC",
       "home": "MEX",
-      "away": "RD32",
+      "away": "ENG",
       "homeTeam": "Mexico",
-      "awayTeam": "Round of 32 8 Winner",
+      "awayTeam": "England",
       "venue": "azteca",
       "venueCity": "Mexico City",
       "broadcast": {
