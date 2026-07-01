@@ -15903,10 +15903,10 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
         "home": 1,
-        "away": 1
+        "away": 2
       }
     },
     {
@@ -16094,8 +16094,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      }
     },
     {
       "id": "round-of-32-79",
@@ -18172,9 +18175,9 @@
       "time": "21:00",
       "timezone": "UTC",
       "home": "PAR",
-      "away": "RD32",
+      "away": "FRA",
       "homeTeam": "Paraguay",
-      "awayTeam": "Round of 32 5 Winner",
+      "awayTeam": "France",
       "venue": "lincoln",
       "venueCity": "Philadelphia, Pennsylvania",
       "broadcast": {
@@ -18360,9 +18363,9 @@
       "time": "20:00",
       "timezone": "UTC",
       "home": "BRA",
-      "away": "RD32",
+      "away": "NOR",
       "homeTeam": "Brazil",
-      "awayTeam": "Round of 32 6 Winner",
+      "awayTeam": "Norway",
       "venue": "metlife",
       "venueCity": "East Rutherford, New Jersey",
       "broadcast": {
