@@ -17049,9 +17049,9 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
-        "home": 0,
+        "home": 3,
         "away": 0
       }
     },
@@ -17240,8 +17240,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      }
     },
     {
       "id": "round-of-32-85",
@@ -18753,10 +18756,10 @@
       "date": "2026-07-06",
       "time": "19:00",
       "timezone": "UTC",
-      "home": "RD32",
-      "away": "RD32",
-      "homeTeam": "Round of 32 11 Winner",
-      "awayTeam": "Round of 32 12 Winner",
+      "home": "POR",
+      "away": "ESP",
+      "homeTeam": "Portugal",
+      "awayTeam": "Spain",
       "venue": "att",
       "venueCity": "Arlington, Texas",
       "broadcast": {
