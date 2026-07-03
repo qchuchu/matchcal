@@ -17431,8 +17431,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      }
     },
     {
       "id": "round-of-32-86",
@@ -19320,9 +19323,9 @@
       "date": "2026-07-07",
       "time": "20:00",
       "timezone": "UTC",
-      "home": "RD32",
+      "home": "SUI",
       "away": "RD32",
-      "homeTeam": "Round of 32 13 Winner",
+      "homeTeam": "Switzerland",
       "awayTeam": "Round of 32 15 Winner",
       "venue": "bcplace",
       "venueCity": "Vancouver",
