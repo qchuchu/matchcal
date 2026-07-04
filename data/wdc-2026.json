@@ -18004,7 +18004,7 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
         "home": 1,
         "away": 0
@@ -19333,9 +19333,9 @@
       "time": "20:00",
       "timezone": "UTC",
       "home": "SUI",
-      "away": "RD32",
+      "away": "COL",
       "homeTeam": "Switzerland",
-      "awayTeam": "Round of 32 15 Winner",
+      "awayTeam": "Colombia",
       "venue": "bcplace",
       "venueCity": "Vancouver",
       "broadcast": {
