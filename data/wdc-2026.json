@@ -17622,9 +17622,9 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 1
       }
     },
@@ -17813,8 +17813,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 2
+      }
     },
     {
       "id": "round-of-32-88",
@@ -18001,8 +18004,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "live",
+      "score": {
+        "home": 1,
+        "away": 0
+      }
     },
     {
       "id": "round-of-16-89",
@@ -19138,10 +19144,10 @@
       "date": "2026-07-07",
       "time": "16:00",
       "timezone": "UTC",
-      "home": "RD32",
-      "away": "RD32",
-      "homeTeam": "Round of 32 14 Winner",
-      "awayTeam": "Round of 32 16 Winner",
+      "home": "ARG",
+      "away": "EGY",
+      "homeTeam": "Argentina",
+      "awayTeam": "Egypt",
       "venue": "mercedes",
       "venueCity": "Atlanta, Georgia",
       "broadcast": {
