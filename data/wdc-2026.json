@@ -18194,7 +18194,7 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
         "home": 0,
         "away": 3
@@ -18385,8 +18385,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      }
     },
     {
       "id": "round-of-16-91",
@@ -19523,10 +19526,10 @@
       "date": "2026-07-09",
       "time": "20:00",
       "timezone": "UTC",
-      "home": "RD16 W1",
-      "away": "RD16 W2",
-      "homeTeam": "Round of 16 1 Winner",
-      "awayTeam": "Round of 16 2 Winner",
+      "home": "FRA",
+      "away": "MAR",
+      "homeTeam": "France",
+      "awayTeam": "Morocco",
       "venue": "gillette",
       "venueCity": "Foxborough, Massachusetts",
       "broadcast": {
