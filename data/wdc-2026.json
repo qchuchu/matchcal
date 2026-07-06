@@ -18767,7 +18767,7 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
         "home": 2,
         "away": 3
@@ -19909,9 +19909,9 @@
       "time": "21:00",
       "timezone": "UTC",
       "home": "NOR",
-      "away": "RD16 W4",
+      "away": "ENG",
       "homeTeam": "Norway",
-      "awayTeam": "Round of 16 4 Winner",
+      "awayTeam": "England",
       "venue": "hardrock",
       "venueCity": "Miami Gardens, Florida",
       "broadcast": {
