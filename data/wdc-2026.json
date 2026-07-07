@@ -18958,10 +18958,10 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       }
     },
     {
@@ -19149,8 +19149,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 4
+      }
     },
     {
       "id": "round-of-16-95",
@@ -19723,10 +19726,10 @@
       "date": "2026-07-10",
       "time": "19:00",
       "timezone": "UTC",
-      "home": "RD16 W5",
-      "away": "RD16 W6",
-      "homeTeam": "Round of 16 5 Winner",
-      "awayTeam": "Round of 16 6 Winner",
+      "home": "ESP",
+      "away": "BEL",
+      "homeTeam": "Spain",
+      "awayTeam": "Belgium",
       "venue": "sofi",
       "venueCity": "Inglewood, California",
       "broadcast": {
