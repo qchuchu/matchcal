@@ -19531,8 +19531,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     },
     {
       "id": "quarter-final-97",
@@ -20106,9 +20109,9 @@
       "time": "01:00",
       "timezone": "UTC",
       "home": "ARG",
-      "away": "RD16 W8",
+      "away": "SUI",
       "homeTeam": "Argentina",
-      "awayTeam": "Round of 16 8 Winner",
+      "awayTeam": "Switzerland",
       "venue": "arrowhead",
       "venueCity": "Kansas City, Missouri",
       "broadcast": {
