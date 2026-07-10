@@ -19722,8 +19722,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      }
     },
     {
       "id": "quarter-final-98",
@@ -20296,9 +20299,9 @@
       "date": "2026-07-14",
       "time": "19:00",
       "timezone": "UTC",
-      "home": "QFW1",
+      "home": "FRA",
       "away": "QFW2",
-      "homeTeam": "Quarterfinal 1 Winner",
+      "homeTeam": "France",
       "awayTeam": "Quarterfinal 2 Winner",
       "venue": "att",
       "venueCity": "Arlington, Texas",
