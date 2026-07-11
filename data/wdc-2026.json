@@ -19913,10 +19913,10 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 2,
+        "away": 1
       }
     },
     {
@@ -20303,9 +20303,9 @@
       "time": "19:00",
       "timezone": "UTC",
       "home": "FRA",
-      "away": "QFW2",
+      "away": "ESP",
       "homeTeam": "France",
-      "awayTeam": "Quarterfinal 2 Winner",
+      "awayTeam": "Spain",
       "venue": "att",
       "venueCity": "Arlington, Texas",
       "broadcast": {
