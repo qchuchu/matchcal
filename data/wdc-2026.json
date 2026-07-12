@@ -20295,10 +20295,10 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
-        "home": 1,
-        "away": 0
+        "home": 3,
+        "away": 1
       }
     },
     {
@@ -20504,9 +20504,9 @@
       "time": "19:00",
       "timezone": "UTC",
       "home": "ENG",
-      "away": "QW4",
+      "away": "ARG",
       "homeTeam": "England",
-      "awayTeam": "Quarterfinal 4 Winner",
+      "awayTeam": "Argentina",
       "venue": "mercedes",
       "venueCity": "Atlanta, Georgia",
       "broadcast": {
