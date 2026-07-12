@@ -20104,8 +20104,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      }
     },
     {
       "id": "quarter-final-100",
@@ -20292,8 +20295,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "live",
+      "score": {
+        "home": 1,
+        "away": 0
+      }
     },
     {
       "id": "semi-final-101",
@@ -20497,9 +20503,9 @@
       "date": "2026-07-15",
       "time": "19:00",
       "timezone": "UTC",
-      "home": "QFW3",
+      "home": "ENG",
       "away": "QW4",
-      "homeTeam": "Quarterfinal 3 Winner",
+      "homeTeam": "England",
       "awayTeam": "Quarterfinal 4 Winner",
       "venue": "mercedes",
       "venueCity": "Atlanta, Georgia",
