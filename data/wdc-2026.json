@@ -20691,8 +20691,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "live",
+      "score": {
+        "home": 0,
+        "away": 0
+      }
     },
     {
       "id": "third-place-103",
