@@ -20691,10 +20691,10 @@
           "ZorTV"
         ]
       },
-      "status": "live",
+      "status": "played",
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 2
       }
     },
     {
@@ -20705,9 +20705,9 @@
       "time": "21:00",
       "timezone": "UTC",
       "home": "FRA",
-      "away": "SF L2",
+      "away": "ENG",
       "homeTeam": "France",
-      "awayTeam": "Semifinal 2 Loser",
+      "awayTeam": "England",
       "venue": "hardrock",
       "venueCity": "Miami Gardens, Florida",
       "broadcast": {
@@ -20900,9 +20900,9 @@
       "time": "19:00",
       "timezone": "UTC",
       "home": "ESP",
-      "away": "SFW2",
+      "away": "ARG",
       "homeTeam": "Spain",
-      "awayTeam": "Semifinal 2 Winner",
+      "awayTeam": "Argentina",
       "venue": "metlife",
       "venueCity": "East Rutherford, New Jersey",
       "broadcast": {
