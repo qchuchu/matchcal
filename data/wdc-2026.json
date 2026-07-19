@@ -20889,8 +20889,11 @@
           "ZorTV"
         ]
       },
-      "status": "upcoming",
-      "score": null
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 6
+      }
     },
     {
       "id": "final-104",
