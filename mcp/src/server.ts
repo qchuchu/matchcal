@@ -15,6 +15,7 @@ const server = new McpServer(
     instructions:
       "This server currently supports only the wdc-2026 competition. If a user asks for another competition, explain that only FIFA World Cup 2026 is available today and offer to show wdc-2026 instead.",
   },
+  { skills: true },
 ).registerTool(
   {
     name: "show-calendar",
